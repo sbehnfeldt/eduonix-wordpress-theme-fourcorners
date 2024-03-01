@@ -14,7 +14,7 @@
 			<span><i class="fa fa-envelope"></i> Email: something@something.com</span>
 		</div>
 		<div class="large-3 columns">
-			<form>
+			<form method="get" action="<?php echo esc_url(home_url('/')); ?>">
 				<input type="text" name="s" placeholder="Search...">
 				<button type="submit"><i class="fa fa-search"></i></button>
 			</form>

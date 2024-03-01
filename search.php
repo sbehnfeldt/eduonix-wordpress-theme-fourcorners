@@ -7,19 +7,12 @@
 <section class="title-section">
 	<p class="welcome-text">Welcome To</p>
 	<h1>Blog</h1>
-	<p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur corporis
-		enim esse expedita explicabo ipsa ipsam maxime minima, molestiae perferendis provident recusandae, reprehenderit
-		rerum similique vel vero voluptate voluptatem.</p>
+	<p class="sub-text">Search Results</p>
 </section>
 
 <main>
 	<?php
-	$cat = get_category_by_slug( 'featured' );
-
-	$query = new WP_Query( [
-		'cat' => - $cat->cat_ID
-	] );
-	while ( $query->have_posts() ): $query->the_post(); ?>
+	while ( have_posts() ): the_post(); ?>
 
 		<article class="blog-post">
 			<div class="row">

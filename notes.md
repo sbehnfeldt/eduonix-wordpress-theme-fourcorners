@@ -21,4 +21,7 @@ Copied head, header and footer into partial templates.
 ## Lesson 79) Homepage Posts
 Add template for front page.  Add theme support for featured image.
 
+## Lesson 80) Blog, Archive & Search Pages
+Edited index.php to display "Featured" blog posts only.  Added templates for archive and search results.
+
 

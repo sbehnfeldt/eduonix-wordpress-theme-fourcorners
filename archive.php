@@ -7,19 +7,33 @@
 <section class="title-section">
 	<p class="welcome-text">Welcome To</p>
 	<h1>Blog</h1>
-	<p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur corporis
-		enim esse expedita explicabo ipsa ipsam maxime minima, molestiae perferendis provident recusandae, reprehenderit
-		rerum similique vel vero voluptate voluptatem.</p>
+	<p class="sub-text">
+		<?php
+		if ( is_category() ) {
+			single_cat_title();
+		} elseif ( is_author() ) {
+			the_post();
+			echo 'Archives by Author: ' . get_the_author();
+			rewind_posts();
+		} elseif ( is_tag() ) {
+			single_tag_title();
+		} elseif ( is_day() ) {
+			echo 'Archives by Day: ' . get_the_date();
+		} elseif ( is_month() ) {
+			echo 'Archives by Month: ' . get_the_date( 'F Y' );
+		} elseif ( is_year() ) {
+			echo 'Archives by Year: ' . get_the_date( 'Y' );
+		} else {
+			echo 'Archives';
+		}
+
+		?>
+	</p>
 </section>
 
 <main>
 	<?php
-	$cat = get_category_by_slug( 'featured' );
-
-	$query = new WP_Query( [
-		'cat' => - $cat->cat_ID
-	] );
-	while ( $query->have_posts() ): $query->the_post(); ?>
+	while ( have_posts() ): the_post(); ?>
 
 		<article class="blog-post">
 			<div class="row">
