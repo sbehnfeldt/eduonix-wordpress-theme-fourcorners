@@ -26,3 +26,6 @@ Edited index.php to display "Featured" blog posts only.  Added templates for arc
 
 ## Lesson 81) Single Posts, Pages & Widgets
 Added page and single post templates.  Created 5 widget locations.
+
+## Lesson 82) Gallery Posts
+Added category-specific template for "Gallery" category
