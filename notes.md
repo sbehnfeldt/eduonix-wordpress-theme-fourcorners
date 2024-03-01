@@ -18,5 +18,7 @@ Copied styling from static CSS mockup app.css into style.css.
 Copied head, header and footer into partial templates.
 
 
+## Lesson 79) Homepage Posts
+Add template for front page.  Add theme support for featured image.
 
 
